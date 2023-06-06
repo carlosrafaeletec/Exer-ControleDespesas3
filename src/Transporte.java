@@ -34,6 +34,7 @@ public class Transporte extends Despesa {
 
     @Override
     public void listarDespesa() {
-        listarDespesa();
+        System.out.println(kmPercorrida);
+        System.out.println(valorPedagios);
     }
 }

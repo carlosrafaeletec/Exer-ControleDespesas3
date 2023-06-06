@@ -20,8 +20,8 @@ public abstract class Despesa {
 
     public void cadastrarDespesa(){
         System.out.println("Digite sua descricao: ");
-        descricao = Despesa.nextline();
         valorTotal = 0;
+        descricao = "Itens";
     }
 
     abstract void calcularDespesa();

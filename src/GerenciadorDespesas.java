@@ -1,8 +1,8 @@
-public class GerenciadorDespesas {
+public class GerenciadorDespesas{
     private int qtdeAlimentacao;
     private int qtdeTransporte;
     private int qtdeDiaria;
-    private double totalAliemntacao;
+    private double totalAlimentacao;
     private double totalTransporte;
     private double totalDiaria;
     private double totalDespesas;
@@ -32,11 +32,11 @@ public class GerenciadorDespesas {
     }
 
     public double getTotalAliemntacao() {
-        return totalAliemntacao;
+        return totalAlimentacao;
     }
 
     public void setTotalAliemntacao(double totalAliemntacao) {
-        this.totalAliemntacao = totalAliemntacao;
+        this.totalAlimentacao = totalAliemntacao;
     }
 
     public double getTotalTransporte() {
@@ -63,7 +63,26 @@ public class GerenciadorDespesas {
         this.totalDespesas = totalDespesas;
     }
 
-    public void analisarDespesas(despesa:Despesa){
+    public void analisarDespesas(Despesa despesa){
+        if(despesa instanceof Alimentacao) {
+            totalDespesas += despesa.getValorTotal();
+            totalAlimentacao += despesa.getValorTotal();
+            qtdeAlimentacao += 1;
+        }
+
+        if(despesa instanceof Transporte) {
+            totalDespesas += despesa.getValorTotal();
+            totalTransporte += despesa.getValorTotal();
+            qtdeTransporte += 1;
+        }
+
+        if(despesa instanceof Diaria){
+            totalDespesas += despesa.getValorTotal();
+            totalDiaria += despesa.getValorTotal();
+            qtdeDiaria += 1;
+        }
+
+
 
     }
 

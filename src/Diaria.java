@@ -26,6 +26,7 @@ public class Diaria extends Despesa {
 
     @Override
     public void listarDespesa() {
-        listarDespesa();
+        System.out.println(qtdeDiaria);
+        ;
     }
 }

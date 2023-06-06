@@ -27,10 +27,12 @@ public class Alimentacao extends Despesa {
 
     public void cadastrarDespesa(){
         setValorTotal(0);
+        setDescricao("Alimento");
     }
 
     @Override
     public void listarDespesa() {
-        listarDespesa();
+        System.out.println(qtdeRefeições);
+        System.out.println(nomeRestaurante);
     }
 }
